@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ShopEasy</title>
+  <style>
+    body { font-family: Arial; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    h1   { color: #2c3e50; }
+    .product { border: 1px solid #ddd; border-radius: 8px;
+               padding: 16px; margin: 12px 0; display: flex;
+               justify-content: space-between; align-items: center; }
+    .price    { font-weight: bold; color: #27ae60; font-size: 1.2em; }
+    .category { background: #ecf0f1; padding: 4px 10px;
+                border-radius: 20px; font-size: 0.85em; }
+  </style>
+</head>
+<body>
+  <h1>ShopEasy - Product Listing</h1>
+  {% for product in products %}
+  <div class="product">
+    <div>
+      <strong>{{ product.name }}</strong>
+      <span class="category">{{ product.category }}</span>
+    </div>
+    <div class="price">{{ product.price }}</div>
+  </div>
+  {% endfor %}
+</body>
+</html>
