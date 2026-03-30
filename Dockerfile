@@ -10,12 +10,3 @@ COPY . .
 EXPOSE 5000
 
 CMD ["python", "app.py"]
-```
-
-**3.2 Create `.dockerignore`**
-```
-__pycache__
-*.pyc
-*.pyo
-.env
-venv/
