@@ -9,12 +9,12 @@ pipeline {
     }
 
     stage('Clone Repository') {
-    steps {
-        git(
-            branch: 'main',
-            url: 'https://github.com/prabhavpss01-dot/ShopEasy-Product-Listing-App.git',
-            credentialsId: 'github-creds'
-           )
+        steps {
+            git(
+                branch: 'main',
+                url: 'https://github.com/prabhavpss01-dot/ShopEasy-Product-Listing-App.git',
+                credentialsId: 'github-creds'
+               )
          }
      }
 
