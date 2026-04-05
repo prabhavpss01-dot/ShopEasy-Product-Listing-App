@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = "your-dockerhub-username/shopeasy-python"
-        APP_SERVER = "ubuntu@<app-ec2-public-ip>"
+        DOCKER_IMAGE = "prabhavpss01/shopeasy-python"
+        APP_SERVER = "ubuntu@3.235.187.150"
         CONTAINER_PORT = "5000"
     }
     stages {
