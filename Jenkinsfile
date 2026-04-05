@@ -1,22 +1,22 @@
-
 pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE  = "your-dockerhub-username/shopeasy-python"
-        APP_SERVER    = "ubuntu@<app-ec2-public-ip>"
+        DOCKER_IMAGE   = "your-dockerhub-username/shopeasy-python"
+        APP_SERVER     = "ubuntu@<app-ec2-public-ip>"
         CONTAINER_PORT = "5000"
     }
 
-    stage('Clone Repository') {
-        steps {
-            git(
-                branch: 'main',
-                url: 'https://github.com/prabhavpss01-dot/ShopEasy-Product-Listing-App.git',
-                credentialsId: 'github-creds'
-               )
-         }
-     }
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git(
+                    branch: 'main',
+                    url: 'https://github.com/prabhavpss01-dot/ShopEasy-Product-Listing-App.git',
+                    credentialsId: 'github-creds'
+                )
+            }
+        }
 
         stage('Install Dependencies') {
             steps {
@@ -68,4 +68,4 @@ pipeline {
             echo 'Pipeline failed. Check the console output.'
         }
     }
-
+}
