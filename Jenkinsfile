@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = "prabhavpss01/shopeasy-python"
-        APP_SERVER = "ubuntu@3.235.187.150"
+        APP_SERVER = "ubuntu@34.229.62.240"
         CONTAINER_PORT = "5000"
     }
     stages {
